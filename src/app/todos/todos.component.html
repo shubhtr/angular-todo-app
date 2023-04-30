@@ -1,0 +1,24 @@
+<div class="wrapper">
+
+	<form (submit)="addTodo()">
+		<div class="task-input">
+			<input type="text" name="inputTodo" placeholder="Enter todo..." class="todo-input"
+				[(ngModel)]="inputTodo" />
+			<button type="submit" mat-fab><mat-icon>add</mat-icon></button>
+		</div>
+	</form>
+	<br />
+
+	<div class="clear-btn-container">
+		<button class="clear-btn" (click)="deleteAll()">Clear All</button>
+	</div>
+
+	<br /><br />
+	<div *ngFor="let todo of todos; let i = index;" class="todo {{ (todo.completed ? 'done' : '') }}">
+		<div class="id">{{ i + 1 }}</div>
+		<div class="content" (click)="toggleDone(i)">{{ todo.content }}</div>
+		<button class="remove-btn" (click)="deleteTodo(i)">Remove</button>
+	</div>
+
+</div>
+

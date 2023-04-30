@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    color: #fff;
+    background: #ff00d4;
+}
+
+.wrapper {
+    max-width: 405px;
+    background: #fff;
+    margin: 137px auto;
+    border-radius: 7px;
+    padding: 28px 0 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #f9ddf4, #dff7fb);
+}
+
+.task-input {
+    position: relative;
+    height: 52px;
+    /* padding: 0 25px; */
+    padding: 0 25px 0 25px;
+}
+
+
+.task-input mat-icon {
+    position: absolute;
+    top: 50%;
+    color: #999;
+    font-size: 25px;
+    transform: translate(320px, -50%);
+}
+
+.task-input input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0 20px 0 53px;
+    border: 1px solid #999;
+}
+
+.task-input input:focus,
+.task-input input.active {
+    padding-left: 25px;
+    border: 2px solid #006aff;
+}
+
+.task-input input::placeholder {
+    color: #bfbfbf;
+}
+
+.clear-btn-container {
+    text-align: center;
+}
+
+.clear-btn {
+    border: none;
+    opacity: 0.6;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 7px 13px;
+    border-radius: 4px;
+    letter-spacing: 0.3px;
+    transition: transform 0.25s ease;
+    background: linear-gradient(135deg, #ff00d4 0%, #00ddff 100%);
+}
+
+.todo {
+    display: flex;
+    padding: 10px 15px;
+    background-color: #FFF;
+
+    border-bottom: 1px solid #DDD;
+    border-radius: 10px;
+
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+
+.todo:nth-child(even) {
+    background-color: #EEE;
+}
+
+.todo:last-of-type {
+    border-bottom: 0;
+}
+
+.todo .id {
+    flex: 1 1 50px;
+}
+
+.todo .content {
+    flex: 1 1 100%;
+}
+
+.todo.done .content {
+    text-decoration: line-through;
+}
+
+
+.remove-btn {
+    border: none;
+    opacity: 0.6;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 7px 13px;
+    border-radius: 4px;
+    letter-spacing: 0.3px;
+    transition: transform 0.25s ease;
+    background: #01c2e0;
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .wrapper {
+        padding: 20px 0;
+    }
+
+    .filters span {
+        margin: 0 5px;
+    }
+
+    .task-input {
+        padding: 0 20px;
+    }
+
+    .controls {
+        padding: 18px 20px;
+    }
+
+    .task-box {
+        margin-top: 20px;
+        margin-right: 5px;
+        padding: 0 15px 10px 20px;
+    }
+
+    .task label input {
+        margin-top: 4px;
+    }
+}
